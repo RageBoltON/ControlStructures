@@ -7,11 +7,13 @@ using namespace std;
 #define LOWER_RIGHT_ANGLE (char)217
 #define HORIZONTAL_LINE (char)196
 #define VERTICAL_LINE (char)179
-#define WHITE_BOX (char)219
-#define BLACK_BOX ' ' 
+#define WHITE_BOX "\xDB\XDB"
+#define BLACK_BOX "\x20\x20" 
 
 void main()
 {
+	setlocale(LC_ALL, "");
+	
 	int n;
 	cout << "Введите размер доски: "; cin >> n;
 	n++;
@@ -26,11 +28,9 @@ void main()
 			else if (i == n && j == n) cout << LOWER_RIGHT_ANGLE;
 			else if (i == 0 || i == n) cout << HORIZONTAL_LINE << HORIZONTAL_LINE;
 			else if (j == 0 || j == n) cout << VERTICAL_LINE;
-			else if (i % 2 == j % 2)cout << WHITE_BOX << WHITE_BOX;
-			else cout << BLACK_BOX << BLACK_BOX;
+			else cout << (i & 1 ^ j & 1 ? WHITE_BOX : BLACK_BOX);
 			
 			cout << "  ";
-		//привет
 		}
 		cout << endl;
 	}
