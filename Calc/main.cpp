@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 using std::cin;
 using std::cout;
@@ -9,7 +9,7 @@ void main()
 	setlocale(LC_ALL, "Russian");
 	double a, b;
 	char s;
-	cout << "Ââåäèòå àðèôìåòè÷åñêèå âûðàæåíèå: "; cin >> a >> s >> b;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¸Ðµ Ð²Ñ‹Ñ€Ð°Ð¶ÐµÐ½Ð¸Ðµ: "; cin >> a >> s >> b;
 	switch (s)
 	{
 	case '+':cout << a << "+" << b << "=" << a + b << endl; break;
